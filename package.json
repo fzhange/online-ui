@@ -1,0 +1,28 @@
+{
+  "name": "gs_online_ui",
+  "version": "1.0.1",
+  "description": "a ui frame",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "doc:build": "father doc build",
+    "doc:deploy": "father doc deploy",
+    "start": "father doc dev",
+    "build": "father build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "father": "^2.29.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  }
+}
