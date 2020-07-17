@@ -10,8 +10,7 @@
     "es"
   ],
   "scripts": {
-    "doc:build": "father doc build",
-    "doc:deploy": "father doc deploy",
+    "doc:deploy": "father doc build && father doc deploy",
     "start": "father doc dev",
     "build": "father build",
     "prepublish":"npm version patch",
