@@ -1,9 +1,8 @@
 {
-  "vendors.css": "/static/css/vendors.9aca5482e0ca6af1a7e1.css",
-  "vendors.js": "/static/js/vendors.c3314c55.js",
-  "app.js": "/static/js/app.9aca5482e0ca6af1a7e1.js",
-  "note.js": "/static/js/note.d766c4aa.js",
-  "src-button-index.css": "/static/css/src-button-index.9aca5482e0ca6af1a7e1.css",
-  "src-button-index.js": "/static/js/src-button-index.d6387b4d.js",
-  "index.html": "/index.html"
+  "vendors.css": "/gs_online_ui/static/css/vendors.8cc1f242ecafe69f056e.css",
+  "vendors.js": "/gs_online_ui/static/js/vendors.df19201e.js",
+  "app.js": "/gs_online_ui/static/js/app.8cc1f242ecafe69f056e.js",
+  "src-button-index.css": "/gs_online_ui/static/css/src-button-index.8cc1f242ecafe69f056e.css",
+  "src-button-index.js": "/gs_online_ui/static/js/src-button-index.bbe38f10.js",
+  "index.html": "/gs_online_ui/index.html"
 }
