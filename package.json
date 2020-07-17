@@ -13,13 +13,19 @@
     "doc:build": "father doc build",
     "doc:deploy": "father doc deploy",
     "start": "father doc dev",
-    "build": "father build"
+    "build": "father build",
+    "prepublish":"npm version patch",
+    "publish":"npm publish"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "father": "^2.29.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fzhange/gs_online_ui"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
