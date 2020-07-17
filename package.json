@@ -1,6 +1,6 @@
 {
   "name": "gs_online_ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a ui frame",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,8 +13,8 @@
     "doc:deploy": "father doc build && father doc deploy",
     "start": "father doc dev",
     "build": "father build",
-    "prepublish":"npm version patch",
-    "publish":"npm publish"
+    "prepublish": "npm version patch",
+    "publish": "npm publish"
   },
   "keywords": [],
   "author": "",
