@@ -1,5 +1,9 @@
 import Button from "./Button/index";
 
-export default {
+export {
     Button,
+}
+
+export default {
+    Button
 }
