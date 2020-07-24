@@ -1,5 +1,5 @@
 {
-  "name": "gs_online_ui",
+  "name": "@ctrip/gs_online_ui",
   "version": "1.0.4",
   "description": "gs ui components",
   "main": "lib/index.js",
@@ -10,11 +10,11 @@
     "es"
   ],
   "scripts": {
-    "doc:deploy": "father doc build && father doc deploy",
-    "start": "father doc dev",
+    "doc_build":"father doc build",
+    "doc_dev": "father doc dev",
     "dev": "webpack-dev-server --open --mode development",
     "build": "father build",
-    "prepublish": "npm version patch",
+    "prepublishOnly": "npm i && npm run build && npm version patch",
     "publish": "npm publish"
   },
   "keywords": [
@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fzhange/gs_online_ui"
+    "url": "git@git.dev.sh.ctripcorp.com:frontStrategyGroup/gs_online_ui.git"
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
