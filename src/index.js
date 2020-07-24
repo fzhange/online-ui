@@ -4,6 +4,3 @@ export {
     Button,
 }
 
-export default {
-    Button
-}
