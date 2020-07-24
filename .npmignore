@@ -3,3 +3,9 @@ node_modules/
 .docz/
 .fatherrc
 dist
+
+examples
+dist
+.babelrc
+.gitignore
+webpack.config.js

@@ -12,6 +12,7 @@
   "scripts": {
     "doc:deploy": "father doc build && father doc deploy",
     "start": "father doc dev",
+    "dev": "webpack-dev-server --open --mode development",
     "build": "father build",
     "prepublish": "npm version patch",
     "publish": "npm publish"

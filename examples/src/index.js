@@ -6,7 +6,7 @@ import {Button} from  "../../src/index"
 class App extends React.Component{
     render(){
         return (
-            <Button />
+            <Button color="red"/>
         )
     }
 }
