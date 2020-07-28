@@ -3,7 +3,7 @@
 
 before_script:
   - npm install --registry=http://registry.npm.release.ctripcorp.com --no-package-lock
-  - npm run father doc build
+  - npm run doc_build
 cache:
   paths:
     - node_modules/
@@ -17,7 +17,7 @@ cache:
 #     paths:
 #       - test
 #   except:
-#     - master
+#     - master  
 
 
 pages:
