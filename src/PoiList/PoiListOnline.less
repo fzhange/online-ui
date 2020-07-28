@@ -1,0 +1,91 @@
+.page_container{
+    margin: 0 auto;
+    max-width: 1200px;
+    .more_con{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 26px;
+        text-align: right;
+        line-height: 38px;
+        position: relative;
+        &:after{
+            content: '';
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMBAMAAACtsOGuAAAAJFBMVEUAAABERERISEhERERGRkZERERFRUVFRUVFRUVKSkpOTk5ERET29v2ZAAAADHRSTlMA5SKpHN2gmLYWDSlkmONiAAAAK0lEQVQI12OY4cDAwMAcwgAEhgpAgk0IxCzcACTYpWBEogJUwlQBohisDQCd7AUZ1GFsawAAAABJRU5ErkJggg==) 100% no-repeat;
+            position: absolute;
+            right: 10px;
+            width: 16px;
+            height: 38px;
+        }
+    }
+    .page_container_sub{
+        display: flex;
+        .img_style{
+            width: 100%;
+        }
+        .img_con{
+            position: relative;
+            width: 25%;
+            padding: 0px 10px;
+            box-sizing: border-box;
+            &:hover{
+                .layer{
+                    z-index: -1 !important;
+                }
+                .hover_theme{
+                    z-index: 1 !important;
+                }
+            }
+    
+            .hover_theme{
+                z-index: -1;
+                background: rgba(0,0,0,0.6);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: calc(100% - 20px);
+                color: #fff;
+                .hover_theme_desc{
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                    font-size: 18px;
+                    font-weight: normal;
+                    right: 0px;
+                    text-align: center;
+                }
+            }
+    
+            .layer{
+                position: absolute;
+                width: calc(100% - 20px);
+                top: 0;
+                bottom: 0;
+                color: #fff;
+                background-image: linear-gradient(-180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 85%);
+                .desc_con{
+                    width: calc(100% - 20px);
+                    font-size: 12px;
+                    padding: 0 20px 15px;
+                    box-sizing: border-box;
+                    position: absolute;
+                    bottom: 0;
+                    .title{
+                        font-size: 16px;
+                        color: #fff;
+                        font-weight: 500;
+                        overflow: hidden;
+                        max-height: 40px;
+                        line-height: 20px;
+                        margin-bottom: 4px;
+                    }
+                    .desc_detial{
+                        
+                    }
+                }
+            }
+        }
+    }
+   
+}

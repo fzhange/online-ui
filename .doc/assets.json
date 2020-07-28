@@ -1,8 +1,10 @@
 {
-  "vendors.css": "/gs_online_ui/static/css/vendors.8cc1f242ecafe69f056e.css",
-  "vendors.js": "/gs_online_ui/static/js/vendors.df19201e.js",
-  "app.js": "/gs_online_ui/static/js/app.8cc1f242ecafe69f056e.js",
-  "src-button-index.css": "/gs_online_ui/static/css/src-button-index.8cc1f242ecafe69f056e.css",
-  "src-button-index.js": "/gs_online_ui/static/js/src-button-index.bbe38f10.js",
-  "index.html": "/gs_online_ui/index.html"
+  "vendors.css": "/static/css/vendors.2514df60d93aa5183c57.css",
+  "vendors.js": "/static/js/vendors.61e6f36a.js",
+  "app.js": "/static/js/app.2514df60d93aa5183c57.js",
+  "src-button-index.css": "/static/css/src-button-index.2514df60d93aa5183c57.css",
+  "src-button-index.js": "/static/js/src-button-index.c08ec681.js",
+  "src-poi-list-index.css": "/static/css/src-poi-list-index.2514df60d93aa5183c57.css",
+  "src-poi-list-index.js": "/static/js/src-poi-list-index.201d07a7.js",
+  "index.html": "/index.html"
 }

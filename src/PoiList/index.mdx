@@ -1,0 +1,34 @@
+---
+name: 主题榜单组件
+route: /PoiList
+menu: 通用
+---
+import { Playground } from 'docz';
+import PoiList from './index';
+
+# 主题榜单组件
+提供榜单数据，自适应PC,ipad,mobile.
+## 引入方式
+>import {PoiList} from "gs_online_ui"
+
+
+## 效果演示
+### online
+
+<PoiList></PoiList>
+
+### mobile
+
+<PoiList userAgent={{isMobile:true}}></PoiList>
+
+
+
+## API
+
+|  参数  | 说明  |  类型 |  默认值 |
+|  ----  | ----  |  ----  | ----  |
+| local  | 语言种类 |  string |  en-us  |
+| userAgent  | 设备代理 |  object |  {isMobile,isiPad}  |
+| destinationId  | 目的地ID |  num |  无  |
+
+

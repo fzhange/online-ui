@@ -1,0 +1,29 @@
+#  the pages job run in the deploy stage; the job affect branch of master;
+#  the test job runs in the test stage； builds the site in a directory called test； The job affects all branches except master
+
+before_script:
+  - npm install
+  - npm run father doc build
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  stage: deploy
+  script:
+    - mv .doc public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
+test:
+  stage: test
+  script:
+    - mv .doc test
+  artifacts:
+    paths:
+      - test
+  except:
+    - master

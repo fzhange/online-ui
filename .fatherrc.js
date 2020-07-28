@@ -17,7 +17,4 @@ export default {
             react: 'React',
         }
     },
-    doc:{
-        base: '/gs_online_ui/'
-    }
 }
