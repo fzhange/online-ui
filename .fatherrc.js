@@ -17,4 +17,7 @@ export default {
             react: 'React',
         }
     },
+    doc:{
+        base: '/frontStrategyGroup/gs_online_ui'
+    }
 }

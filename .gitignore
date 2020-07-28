@@ -4,5 +4,5 @@ dist/
 es/
 lib/
 note.md
-.doc
+.doc/
 package-lock.json
