@@ -14,7 +14,7 @@
     "doc_dev": "father doc dev",
     "dev": "webpack-dev-server --open --mode development",
     "build": "father build",
-    "patch":"npm version patch",
+    "patch": "npm version patch",
     "prepublishOnly": "npm i && npm run build"
   },
   "keywords": [
@@ -55,7 +55,6 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/runtime": "^7.10.4",
     "@babel/runtime-corejs3": "^7.10.4",
-    "@ctrip/shark-js-sdk": "^1.0.5",
     "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
