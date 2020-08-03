@@ -13,13 +13,7 @@ import PoiList from './index';
 
 
 ## 效果演示
-### online
-
-<PoiList></PoiList>
-
-### mobile
-
-<PoiList userAgent={{isMobile:true}}></PoiList>
+<PoiList  districtId={294} locale="ja-JP"/>
 
 
 
@@ -27,8 +21,10 @@ import PoiList from './index';
 
 |  参数  | 说明  |  类型 |  默认值 |
 |  ----  | ----  |  ----  | ----  |
-| local  | 语言种类 |  string |  en-us  |
-| userAgent  | 设备代理 |  object |  {isMobile,isiPad}  |
-| destinationId  | 目的地ID |  num |  无  |
+| locale  | 语言种类 |  string |  en-US  |
+| currency  | 货币类型 |  string |  USD  |
+| ENV  | 环境 |  string |  PROD  |
+| districtId  | 目的地ID |  num |  无  |
+
 
 

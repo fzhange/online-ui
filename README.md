@@ -1,7 +1,7 @@
 # 攻略 online UI 组件库
 
 ## 支持umd cjs esm 形式接入 
-> dist 目录下为cjs
+> lib 目录下为cjs
 
 > es目录下为 esm
 
