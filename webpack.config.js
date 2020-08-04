@@ -9,10 +9,10 @@ module.exports = {
     output:{
         path: path.resolve(__dirname, 'dist')
     },
-    devServer: {
-        contentBase: './dist',
-        port: 3000
-    },
+    // devServer: {
+    //     contentBase: './dist',
+    //     port: 8080
+    // },
     mode:"development",
     module: {
         rules: [

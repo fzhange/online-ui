@@ -19,3 +19,5 @@
 `prepublishOnly` 发布npm包自动执行脚本，开发无需关注。
 
 `patch` 发布npm代码，进行version更新 1.0.0 => 1.0.1
+
+`dev_build` 本地测试打包处理 开发使用
