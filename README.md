@@ -1,13 +1,13 @@
-# 攻略 online UI 组件库
+# gs online UI library
 
-## 支持umd cjs esm 形式接入 
+## support umd cjs esm access from
 > lib 目录下为cjs
 
 > es目录下为 esm
 
 > dist 目录下为 umd
 
-## 构建脚本
+## script
 `doc_build` 生成doc文档所需资源
 
 `doc_dev` 本地开发模式 预览doc
@@ -20,4 +20,12 @@
 
 `patch` 发布npm代码，进行version更新 1.0.0 => 1.0.1
 
-`dev_build` 本地测试打包处理 开发使用
+## install
+`npm i @ctrip/gs_online_ui`
+
+## Usage
+`import {PoiList} from "gs_online_ui"`
+
+
+## doc pages
+http://pages.release.ctripcorp.com/frontStrategyGroup/gs_online_ui
