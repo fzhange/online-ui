@@ -81,7 +81,7 @@ class PoiListOnline extends React.Component {
                     }
                     <div className="img_con">
                         <img className="img_style" style={{height: '100%'}}
-                            src="https://dimg02.c-ctrip.com/images/01055120007lbex10B7D7.png" />
+                            src={handlePicUrl("https://dimg02.c-ctrip.com/images/01055120007lbex10B7D7.png", 350, 230)} />
                         <div className="layer" style={{ background: 'rgba(15,41,77,0.50)' }}>
                             <div className="desc_more" onClick={this.moreClick.bind(this)}>
                                 {i18n['key.more']}

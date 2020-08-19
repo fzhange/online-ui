@@ -7,7 +7,7 @@ export default {
         type:"babel"
     },
     entry: 'src/index.js', 
-    lessInBabelMode:true,
+    lessInBabelMode:true, //在 babel 模式下做 less 编译，基于 gulp-less，默认不开启。
     extraBabelPlugins:[],
     umd:{
         name:"gs_online_ui",

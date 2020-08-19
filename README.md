@@ -1,4 +1,5 @@
 # gs online UI library
+> 目前不支持服务端渲染
 
 ## support umd cjs esm access from
 > lib 目录下为cjs
@@ -24,7 +25,7 @@
 `npm i @ctrip/gs_online_ui`
 
 ## Usage
-`import {PoiList} from "gs_online_ui"`
+`import {PoiList} from "@ctrip/gs_online_ui"`
 
 
 ## doc pages
