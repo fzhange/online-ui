@@ -14,19 +14,20 @@ import PoiList from './index';
 
 
 ## 效果演示
-<PoiList cityName="hangzhou" districtId="14" locale="en-US"/>
+<PoiList type={2} id={14} source="plane" ENV="UAT"/>
 
 
 
 ## API
 
-|  参数  | 说明  |  类型 |  默认值 |
+|  参数  | 说明  |  类型 |  默认值 |  必传 |
 |  ----  | ----  |  ----  | ----  |
-| locale  | 语言种类 |  string |  en-US  |
-| currency  | 货币类型 |  string |  USD  |
-| ENV  | 环境 |  string |  PROD  |
-| districtId  | 目的地ID |  num |  14  |
-| cityName  | 目的地名称 |  string 英文名称 |  hangzhou  |
+| locale  | 语言种类 |  string |  en-US  | N |
+| currency  | 货币类型 |  string |  USD  | N |
+| ENV  | 环境 |  string |  PROD  | N |
+| id  | id |  num |  无  | Y |
+|  type | id类型 |  num |  1=districtId 2=机票cityId  | Y |
+|  source | 来源 |  string |  无  | Y |
 
 
 

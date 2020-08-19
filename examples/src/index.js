@@ -6,7 +6,7 @@ import {Button,PoiList} from  "../../src/index"
 class App extends React.Component{
     render(){
         return (
-            <PoiList cityName="hangzhou" districtId="14" locale="en-US"/>
+            <PoiList type={2} id={14} source="plane" ENV="UAT"/>
         )
     }
 }
