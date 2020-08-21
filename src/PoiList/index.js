@@ -51,7 +51,7 @@ class PoiListOnline extends React.Component {
         let { rankList } = this.state;
         let { i18n } = this.props;
 
-        if (!rankList.length || rankList.length < 4) return null;
+        if (!rankList.length || rankList.length <= 2) return null;
 
         return (
             <div className="page_container">
