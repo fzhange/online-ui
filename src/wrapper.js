@@ -8,9 +8,9 @@ export default function wrapper(App){
             }
         }
         componentDidMount(){
-            const {local='en-us'} = this.props;
+            const {locale='en-us'} = this.props;
             const script = document.createElement("script");
-            script.src = `https://english.ctrip.com/m/i18n/100015463/${local}.js`;
+            script.src = `https://english.ctrip.com/m/i18n/100015463/${locale}.js`;
             script.async = true;
             script.onload = ()=>{
                 this.setState({

@@ -6,7 +6,7 @@ import { invoke_post, thousandBitSeparator, replaceAll, handlePicUrl } from "../
 import PropTypes from 'prop-types';
 
 
-
+// window['__bfi'].push(['_tracklog', '102358', `more_module_name=${name}&more_module_index=${index}${id ? '&more_module_id=' + id : ''}`])
 export default @wrapper
 class PoiListOnline extends React.Component {
     constructor(props) {
