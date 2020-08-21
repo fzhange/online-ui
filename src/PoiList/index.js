@@ -34,6 +34,8 @@ class PoiListOnline extends React.Component {
             let moreUrl = resultData?.moreUrl || '';
             this.setState({
                 rankList, moreUrl
+            },()=>{
+                this.props.subscribleSubComponentUpdate(); //必须写这行代码 通知父组件子组件渲染完成 曝光逻辑处理
             })
         } catch (error) {
             console.log('error in componentDidMount : ', error);
@@ -50,11 +52,12 @@ class PoiListOnline extends React.Component {
     render() {
         let { rankList } = this.state;
         let { i18n } = this.props;
-
         if (!rankList.length || rankList.length <= 2) return null;
 
         return (
-            <div className="page_container">
+            <div className="page_container burited_point" 
+                data-exposure-content={`districtId=2&districtType=2&actioncode=tgs_dstdetail_expo_listtopic_card`}
+                data-exposure-traceid="138901">
                 <h1 className="title_desc">
                     {replaceAll(i18n['key.destination.topicslist'])}
                 </h1>

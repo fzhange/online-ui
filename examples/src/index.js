@@ -6,7 +6,13 @@ import {Button,PoiList} from  "../../src/index"
 class App extends React.Component{
     render(){
         return (
-            <PoiList type={2} id={14} source="flight" ENV="UAT"/>
+            <>
+                <h1 style={{height:"50vh"}}>hello</h1>
+                <h1 style={{height:"50vh"}}>hello</h1>
+                <h1 style={{height:"50vh"}}>hello</h1>
+                <PoiList type={2} id={14} source="flight" ENV="UAT"/>
+            </>
+           
         )
     }
 }
