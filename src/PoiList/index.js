@@ -47,16 +47,19 @@ class PoiListOnline extends React.Component {
     }
     itemClick(item) {
         const { jumpUrl } = item;
-        if (!!jumpUrl) location.href = `${location.origin}${jumpUrl}`; ;
+        let { locale, ENV, currency, id, type, source,pagecode } = this.props;
+        this?.props?.tracelog(`distridId=${id}&actioncode=tgs_poidetail_expo_listmoudle&sourceType=${source}&pageid=${pagecode}`,123)
+        // if (!!jumpUrl) location.href = `${location.origin}${jumpUrl}`; ;
     }
     render() {
         let { rankList } = this.state;
         let { i18n } = this.props;
         if (!rankList.length || rankList.length <= 2) return null;
-
+        let { locale, ENV, currency, id, type, source,pagecode } = this.props;
         return (
-            // <div className="page_container burited_point"  data-exposure-content={`districtId=2&districtType=2&actioncode=tgs_dstdetail_expo_listtopic_card`} data-exposure-traceid="138901">
-            <div className="page_container">
+            <div className="page_container burited_point"  
+                data-exposure-content={`distridId=${id}&actioncode=tgs_poidetail_expo_listmoudle&sourceType=${source}&pageid=${pagecode}`}
+                data-exposure-traceid="138901">
                 <h1 className="title_desc">
                     {replaceAll(i18n['key.destination.topicslist'])}
                 </h1>

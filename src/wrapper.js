@@ -22,15 +22,19 @@ export default function wrapper(App){
             this.exposureTraced = [];
             this.state = {
                 i18n:{},
+                pagecode:null,
             }
+        }
+        getPageCode(){ //获取pagecode 埋点需要
+            let pagecode = null;
+            pagecode = document.querySelector('#page_id') && document.querySelector('#page_id').value;
         }
         tracelog(value = 'null', traceid = 102358) {
             try{
-                let pagecode = null
-                pagecode = document.querySelector('#page_id') && document.querySelector('#page_id').value;
+                let {pagecode} = this.state;
                 if(!window['__bfi']) window['__bfi'] = [];
-                pagecode && window['__bfi'].push(['_tracklog', traceid, value]);
                 console.table({pagecode:pagecode,traceid:traceid, value:value});
+                pagecode && window['__bfi'].push(['_tracklog', traceid, value]);
             }catch(error){
                 console.error('@ctrip/gs_online_ui_tracelog',error);
             }
@@ -77,17 +81,20 @@ export default function wrapper(App){
         }
         componentDidMount(){
             this.insertI18n();
+            this.getPageCode();
         }
         subscribleSubComponentUpdate(){
             this.initExposureTrace()
         }
         render(){
-            const {i18n} = this.state;
+            const {i18n,pagecode} = this.state;
             return (
                 <App {...this.props} 
                     subscribleSubComponentUpdate={this.subscribleSubComponentUpdate.bind(this)} 
                     tracelog={this.tracelog.bind(this)}
-                    i18n={i18n}>
+                    i18n={i18n}
+                    pagecode={pagecode}
+                    >
                 </App>
             )
         }
