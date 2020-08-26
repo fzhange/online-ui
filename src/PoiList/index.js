@@ -55,9 +55,8 @@ class PoiListOnline extends React.Component {
         if (!rankList.length || rankList.length <= 2) return null;
 
         return (
-            <div className="page_container burited_point" 
-                data-exposure-content={`districtId=2&districtType=2&actioncode=tgs_dstdetail_expo_listtopic_card`}
-                data-exposure-traceid="138901">
+            // <div className="page_container burited_point"  data-exposure-content={`districtId=2&districtType=2&actioncode=tgs_dstdetail_expo_listtopic_card`} data-exposure-traceid="138901">
+            <div className="page_container">
                 <h1 className="title_desc">
                     {replaceAll(i18n['key.destination.topicslist'])}
                 </h1>
