@@ -48,8 +48,8 @@ class PoiListOnline extends React.Component {
     itemClick(item) {
         const { jumpUrl } = item;
         let { locale, ENV, currency, id, type, source,pagecode } = this.props;
-        this?.props?.tracelog(`distridId=${id}&actioncode=tgs_poidetail_expo_listmoudle&sourceType=${source}&pageid=${pagecode}`,123)
-        // if (!!jumpUrl) location.href = `${location.origin}${jumpUrl}`; ;
+        this?.props?.tracelog(`distridId=${id}&actioncode=tgs_poidetail_expo_listmoudle&sourceType=${source}&pageid=${pagecode}`,158877);
+        if (!!jumpUrl) location.href = `${location.origin}${jumpUrl}`; ;
     }
     render() {
         let { rankList } = this.state;
@@ -59,7 +59,7 @@ class PoiListOnline extends React.Component {
         return (
             <div className="page_container burited_point"  
                 data-exposure-content={`distridId=${id}&actioncode=tgs_poidetail_expo_listmoudle&sourceType=${source}&pageid=${pagecode}`}
-                data-exposure-traceid="138901">
+                data-exposure-traceid="158876">
                 <h1 className="title_desc">
                     {replaceAll(i18n['key.destination.topicslist'])}
                 </h1>

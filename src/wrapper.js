@@ -29,7 +29,7 @@ export default function wrapper(App){
             let pagecode = null;
             pagecode = document.querySelector('#page_id') && document.querySelector('#page_id').value;
         }
-        tracelog(value = 'null', traceid = 102358) {
+        tracelog(value = 'null', traceid = '') {
             try{
                 let {pagecode} = this.state;
                 if(!window['__bfi']) window['__bfi'] = [];
