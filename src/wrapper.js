@@ -87,7 +87,7 @@ export default function wrapper(App){
             this.initExposureTrace()
         }
         render(){
-            const {i18n,pagecode} = this.state;
+            const {i18n={},pagecode} = this.state;
             return (
                 <App {...this.props} 
                     subscribleSubComponentUpdate={this.subscribleSubComponentUpdate.bind(this)} 
