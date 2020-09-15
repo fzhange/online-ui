@@ -90,9 +90,13 @@ class PoiListOnline extends React.Component {
                     <div className="img_con">
                         <img className="img_style" src={handlePicUrl("https://dimg04.c-ctrip.com/images/0100x1200082gvlqfB9BF.png", 350, 230)} />
                         <div className="layer" style={{ background: 'rgba(15,41,77,0.50)' }}>
-                            <div className="desc_more" onClick={this.moreClick.bind(this)}>
-                                {i18n['key.more']}
-                            </div>
+                            {
+                                i18n['key.more'] && (
+                                    <div className="desc_more" onClick={this.moreClick.bind(this)}>
+                                        {i18n['key.more']}
+                                    </div>
+                                )
+                            } 
                         </div>
                     </div>
                 </div>

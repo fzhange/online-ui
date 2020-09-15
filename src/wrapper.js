@@ -70,13 +70,33 @@ export default function wrapper(App){
         insertI18n(){
             const {locale='en-us'} = this.props;
             const script = document.createElement("script");
-            script.src = `https://english.ctrip.com/m/i18n/100015463/${locale}.js`;
+            script.src = `https://www.trip.com/m/i18n/100015463/${locale}.js`;
             script.async = true;
-            script.onload = ()=>{
-                this.setState({
-                    i18n:window.i18n_100015463,
-                })
+            let that = this;
+            script.onload = script.onreadystatechange = function(){
+                console.log('onloading',this.readyState);
+                //IE的script 元素只支持onreadystatechange事件，不支持onload事件。 
+                //FF的script 元素不支持onreadystatechange事件，只支持onload事件。
+                if(!this.readyState || this.readyState=='loaded' || this.readyState=='complete'){
+                    that.setState({
+                        i18n:window.i18n_100015463,
+                    })
+                }  
             }
+            script.onerror = function(error){
+                if(!this.readyState || (this.readyState!='loaded' && this.readyState!='complete')){
+                    console.error('shark jssdk loaded error',error);
+                }
+            }
+            // script.onload = ()=>{
+            //     this.setState({
+            //         i18n:window.i18n_100015463,
+            //     })
+            // }
+
+            // script.onerror = (error)=>{
+            //     console.error('shark jssdk loaded error',error);
+            // }
             document.body.appendChild(script);
         }
         componentDidMount(){
