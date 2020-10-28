@@ -14,6 +14,8 @@ class PoiListOnline extends React.Component {
         this.state = {
             rankList: [],
             moreUrl: '',
+            moreText:'',
+            moduleName:"",
         }
     }
     async componentDidMount() {
@@ -30,10 +32,10 @@ class PoiListOnline extends React.Component {
                     id, type, source
                 }
             });
-            let rankList = resultData?.rankList || [];
-            let moreUrl = resultData?.moreUrl || '';
+            console.log('resultData: ', resultData);
+            let {rankList=[],moreUrl='',moreText='',moduleName=''} = resultData;
             this.setState({
-                rankList, moreUrl
+                rankList, moreUrl,moreText,moduleName
             },()=>{
                 this.props.subscribleSubComponentUpdate(); //必须写这行代码 通知父组件子组件渲染完成 曝光逻辑处理
             })
@@ -52,7 +54,8 @@ class PoiListOnline extends React.Component {
         if (!!jumpUrl) window.open(`${location.origin}${jumpUrl}`);
     }
     render() {
-        let { rankList } = this.state;
+        let { rankList,moreText,moduleName } = this.state;
+
         let { i18n={} } = this.props;
         if (!rankList.length || rankList.length <= 2) return null;
         let { locale, ENV, currency, id, type, source,pagecode } = this.props;
@@ -61,7 +64,7 @@ class PoiListOnline extends React.Component {
                 data-exposure-content={`distridId=${id}&actioncode=tgs_poidetail_expo_listmoudle&sourceType=${source}&pageid=${pagecode}`}
                 data-exposure-traceid="158876">
                 <h1 className="title_desc">
-                    {i18n['key.destination.topicslist']}
+                    {moduleName}
                 </h1>
                 <div className="page_container_sub">
                     {
@@ -69,7 +72,6 @@ class PoiListOnline extends React.Component {
                             let haveImageUrl = !!item.imageUrl;
                             let coverImageUrl = haveImageUrl ? handlePicUrl(item.imageUrl, 350, 230) : handlePicUrl('https://dimg04.c-ctrip.com/images/0101t1200081z15yqC330.png', 350, 230)
                             if (idx >= 3) return null;
-                            let totalContent = i18n['key.attractions_number'];
                             return (
                                 <div onClick={this.itemClick.bind(this, item)} className={idx == 2 ? 'img_con img_con_834' : `img_con`} key={idx} style={idx == 0 ? { margin: 0 } : {}}>
                                     <img className="img_style" style={!haveImageUrl?{height:'100%'}:{}} src={coverImageUrl}></img>
@@ -79,7 +81,7 @@ class PoiListOnline extends React.Component {
                                                 <LinesEllipsis text={item.name} maxLine="2" />
                                             </div>
                                             <div className="desc_detial_con">
-                                                {item.poiNum && <div className="l">{replaceAll(totalContent, thousandBitSeparator(item.poiNum || 0))}</div>}
+                                                {item.poiNum && <div className="l">{item.poiNum}</div>}
                                             </div>
                                         </div>
                                     </div>
@@ -91,9 +93,9 @@ class PoiListOnline extends React.Component {
                         <img className="img_style" src={handlePicUrl("https://dimg04.c-ctrip.com/images/0100x1200082gvlqfB9BF.png", 350, 230)} />
                         <div className="layer" style={{ background: 'rgba(15,41,77,0.50)' }}>
                             {
-                                i18n['key.more'] && (
+                                !!moreText && (
                                     <div className="desc_more" onClick={this.moreClick.bind(this)}>
-                                        {i18n['key.more']}
+                                        {moreText}
                                     </div>
                                 )
                             } 

@@ -40,7 +40,7 @@ export async function invoke_post({
     // http://m.uat.ctripqa.com/restapi/soa2/19836/json/getRecommendRankList
     // http://m.uat.ctripqa.com/restapi/soa2/19863/json/getRecommendRankList
     try {
-        let url = `https://m.ctrip.com/restapi/soa2/${serviceCode}/json/${serviceName}`;
+        let url = `https://m.trip.com/restapi/soa2/${serviceCode}/json/${serviceName}`;
         if(ENV != "PROD")  url =  `http://m.uat.ctripqa.com/restapi/soa2/${serviceCode}/json/${serviceName}`;
         let result = await axios({
             withCredentials: true,
@@ -104,5 +104,31 @@ export function replaceAll(str, key) {
       return key || null
     }
     return str.replace(/\%1\$s/g, key)
-  }
+}
+
+export function loadScript(url,callback){
+    const script = document.createElement("script");
+    script.type = 'text/javascript';
+    script.src = url;
+    script.async = true;
+    document.body.appendChild(script);
+    if(script.readyState){
+        script.onreadystatechange = function(){
+            if(script.readyState == 'complete'  || script.readyState == 'loaded'){
+                script.onreadystatechange = null;
+                callback();
+            }
+            if(script.readyState != 'complete' && script.readyState != 'loaded'){
+                console.error('readyState>>>shark jssdk loaded error');
+            }
+        }
+    }else{
+        script.onload = function(){
+			callback();
+        }
+        script.onerror = function(error){
+            console.error('onerror>>>shark jssdk loaded error',error);
+        }
+    }
+}
 

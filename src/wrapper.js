@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { func } from 'prop-types';
+import {loadScript} from "./tool/index";
 
 /**
  * 防抖处理函数，避免连续滚动触发的性能问题
@@ -69,35 +69,11 @@ export default function wrapper(App){
         }
         insertI18n(){
             const {locale='en-us'} = this.props;
-            const script = document.createElement("script");
-            script.src = `https://www.trip.com/m/i18n/100015463/${locale}.js`;
-            script.async = true;
-            let that = this;
-            script.onload = script.onreadystatechange = function(){
-                console.log('onloading',this.readyState);
-                //IE的script 元素只支持onreadystatechange事件，不支持onload事件。 
-                //FF的script 元素不支持onreadystatechange事件，只支持onload事件。
-                if(!this.readyState || this.readyState=='loaded' || this.readyState=='complete'){
-                    that.setState({
-                        i18n:window.i18n_100015463,
-                    })
-                }  
-            }
-            script.onerror = function(error){
-                if(!this.readyState || (this.readyState!='loaded' && this.readyState!='complete')){
-                    console.error('shark jssdk loaded error',error);
-                }
-            }
-            // script.onload = ()=>{
-            //     this.setState({
-            //         i18n:window.i18n_100015463,
-            //     })
-            // }
-
-            // script.onerror = (error)=>{
-            //     console.error('shark jssdk loaded error',error);
-            // }
-            document.body.appendChild(script);
+            loadScript(`https://www.trip.com/m/i18n/100015463/${locale}.js`,()=>{
+                this.setState({
+                    i18n:window.i18n_100015463,
+                })
+            })
         }
         componentDidMount(){
             this.insertI18n();
