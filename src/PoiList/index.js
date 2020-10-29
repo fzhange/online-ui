@@ -70,7 +70,7 @@ class PoiListOnline extends React.Component {
                     {
                         rankList.map((item, idx) => {
                             let haveImageUrl = !!item.imageUrl;
-                            let coverImageUrl = haveImageUrl ? handlePicUrl(item.imageUrl, 350, 230) : handlePicUrl('https://dimg04.c-ctrip.com/images/0101t1200081z15yqC330.png', 350, 230)
+                            let coverImageUrl = haveImageUrl ? handlePicUrl(item.imageUrl, 350, 230) : 'https://pages.trip.com/you/destination/0101t1200081z15yqC330.png'
                             if (idx >= 3) return null;
                             return (
                                 <div onClick={this.itemClick.bind(this, item)} className={idx == 2 ? 'img_con img_con_834' : `img_con`} key={idx} style={idx == 0 ? { margin: 0 } : {}}>
@@ -90,7 +90,7 @@ class PoiListOnline extends React.Component {
                         })
                     }
                     <div className="img_con">
-                        <img className="img_style" src={handlePicUrl("https://dimg04.c-ctrip.com/images/0100x1200082gvlqfB9BF.png", 350, 230)} />
+                        <img className="img_style" src='https://pages.trip.com/you/destination/ff.png' />
                         <div className="layer" style={{ background: 'rgba(15,41,77,0.50)' }}>
                             {
                                 !!moreText && (
