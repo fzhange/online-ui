@@ -22,11 +22,11 @@
 `patch` 发布npm代码，进行version更新 1.0.0 => 1.0.1
 
 ## install
-`npm i @ctrip/gs_online_ui`
+
 
 ## Usage
-`import {PoiList} from "@ctrip/gs_online_ui"`
+
 
 
 ## doc pages
-http://pages.release.ctripcorp.com/frontStrategyGroup/gs_online_ui
+

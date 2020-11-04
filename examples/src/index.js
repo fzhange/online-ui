@@ -1,6 +1,7 @@
 import React from 'react';
 import { render} from 'react-dom';
 import {Button,PoiList} from  "../../src/index"
+console.log('PoiList: ', PoiList);
 // import '@babel/polyfill';
 
 class App extends React.Component{

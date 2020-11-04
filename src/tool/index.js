@@ -36,12 +36,9 @@ export async function invoke_post({
     currency = 'USD',
     ENV = "PROD",
 }) {
-    // http://m.uat.ctripqa.com/restapi/soa2/19836/json/getRecommendRankList
-    // http://m.uat.ctripqa.com/restapi/soa2/19836/json/getRecommendRankList
-    // http://m.uat.ctripqa.com/restapi/soa2/19863/json/getRecommendRankList
     try {
-        let url = `https://m.trip.com/restapi/soa2/${serviceCode}/json/${serviceName}`;
-        if(ENV != "PROD")  url =  `http://m.uat.ctripqa.com/restapi/soa2/${serviceCode}/json/${serviceName}`;
+        // let url = ``;
+        // if(ENV != "PROD")  url = '';
         let result = await axios({
             withCredentials: true,
             url,

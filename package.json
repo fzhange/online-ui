@@ -1,5 +1,5 @@
 {
-  "name": "@ctrip/gs_online_ui",
+  "name": "online_ui",
   "version": "1.0.8",
   "description": "gs ui components",
   "main": "lib/index.js",
@@ -47,15 +47,12 @@
     "husky": "^3.1.0",
     "less": "^3.12.0",
     "less-loader": "^6.2.0",
+    "null-loader": "^4.0.1",
     "rimraf": "^3.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@git.dev.sh.ctripcorp.com:frontStrategyGroup/gs_online_ui.git"
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
@@ -63,7 +60,9 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/runtime": "^7.10.4",
     "@babel/runtime-corejs3": "^7.10.4",
+    "antd": "^4.8.0",
     "axios": "^0.19.2",
+    "babel-plugin-import": "^1.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
