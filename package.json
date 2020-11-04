@@ -1,7 +1,7 @@
 {
-  "name": "online_ui",
-  "version": "1.0.8",
-  "description": "gs ui components",
+  "name": "@super/layout",
+  "version": "1.0.0",
+  "description": "a ui components package",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
