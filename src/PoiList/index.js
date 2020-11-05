@@ -6,7 +6,7 @@ import { invoke_post, thousandBitSeparator, replaceAll, handlePicUrl } from "../
 import PropTypes from 'prop-types';
 
 
-import { Button } from 'antd';
+// import { Button } from 'antd';
 // import "antd/lib/button/style"
 
 
@@ -15,12 +15,7 @@ import { Button } from 'antd';
 export default class PoiListOnline extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            rankList: [],
-            moreUrl: '',
-            moreText:'',
-            moduleName:"",
-        }
+
     }
     // async componentDidMount() {
     //     try {
@@ -55,7 +50,7 @@ export default class PoiListOnline extends React.Component {
         let { locale, ENV, currency, id, type, source,pagecode } = this.props;
         return (
             <div className="page_container">
-                <Button type="primary">Primary Button</Button>
+                {/* <Button type="primary">Primary Button</Button> */}
             </div>
         )
     }
@@ -64,17 +59,3 @@ export default class PoiListOnline extends React.Component {
 
 
 
-PoiListOnline.defaultProps = {
-    locale: "en-US",
-    ENV: "PROD",
-    currency: "USD",
-};
-PoiListOnline.propTypes = {
-    locale: PropTypes.string,
-    ENV: PropTypes.string,
-    currency: PropTypes.string,
-
-    id: PropTypes.number.isRequired,  // id
-    type: PropTypes.number.isRequired, //1=districtId 2=机票cityId
-    source: PropTypes.string.isRequired, //来源
-}
