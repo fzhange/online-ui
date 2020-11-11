@@ -19,8 +19,7 @@
     "doc_dev": "father doc dev",
     "dev": "webpack-dev-server --open --mode development",
     "build": "father build",
-    "patch": "npm version patch",
-    "prepublishOnly": "npm i && npm run build"
+    "patch": "npm version patch"
   },
   "keywords": [
     "react",
