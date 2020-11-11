@@ -1,5 +1,5 @@
 {
-  "name": "@super/layout",
+  "name": "@flowSakura/ui",
   "version": "1.0.0",
   "description": "a ui components package",
   "main": "lib/index.js",

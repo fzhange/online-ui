@@ -1,6 +1,6 @@
-import PoiList from "./PoiList/index"
+import Head from "./Head/index"
 
 export {
-    PoiList
+    Head
 }
 
